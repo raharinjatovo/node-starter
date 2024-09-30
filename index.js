@@ -9,12 +9,15 @@ const upload = multer({ dest: 'public/uploads/' });
 
 // Set EJS as the templating engine
 // use public folder 
+// ok 
+// me
+
 app.use(express.static('public'));
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use('/users', userRouter)
-
+// ok
 // Create a route to upload and resize the image
 app.post('/upload', upload.single('image'), async (req, res) => {
     const sizes = [320, 640, 800, 1024]; // Define sizes for responsive images
