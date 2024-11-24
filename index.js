@@ -81,6 +81,8 @@ app.get('/', (req, res) => {
 });
 
 // Start the server
-app.listen(3000, () => {
+app.listen(8000, () => {
     console.log('Server is running on http://localhost:3000');
 });
+// Export the Express API
+module.exports = app
